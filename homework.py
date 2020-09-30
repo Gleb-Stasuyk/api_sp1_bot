@@ -36,7 +36,7 @@ def send_message(message):
 
 def main():
     current_timestamp = int(time.time())  # начальное значение timestamp
-
+    send_message('Бот начал свою работу')
     while True:
         try:
             new_homework = get_homework_statuses(current_timestamp)
