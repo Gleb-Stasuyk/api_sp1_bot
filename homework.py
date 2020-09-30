@@ -9,7 +9,7 @@ load_dotenv()
 
 PRACTICUM_TOKEN = os.getenv("PRACTICUM_TOKEN")
 TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
-CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')"""
+TELEGRAM_CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')"""
 
 
 def parse_homework_status(homework):
@@ -32,7 +32,7 @@ def get_homework_statuses(current_timestamp):
 
 def send_message(message):
     bot = telegram.Bot(token=TELEGRAM_TOKEN)
-    return bot.send_message(chat_id=CHAT_ID, text=message)
+    return bot.send_message(chat_id=TELEGRAM_CHAT_ID, text=message)
 
 
 def main():
