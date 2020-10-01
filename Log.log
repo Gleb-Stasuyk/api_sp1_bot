@@ -1,0 +1,65 @@
+bot.py[LINE:69]# DEBUG    [2020-10-01 12:18:17,644]  Entering: send_message
+connectionpool.py[LINE:834]# DEBUG    [2020-10-01 12:18:17,644]  Starting new HTTPS connection (1): api.telegram.org
+connectionpool.py[LINE:410]# DEBUG    [2020-10-01 12:18:17,825]  https://api.telegram.org:443 "POST /bot1309103451:AAF51dkAqb8JPJ2-3ej5YDxq37w-6Q3T3xo/sendMessage HTTP/1.1" 200 381
+bot.py[LINE:71]# DEBUG    [2020-10-01 12:18:17,825]  {'message_id': 47, 'date': 1601543897, 'chat': {'id': 250669707, 'type': 'private', 'username': 'awesome_0nly', 'first_name': 'Gleb', 'last_name': 'Stasyuk'}, 'text': 'Бот начал свою работу', 'entities': [], 'caption_entities': [], 'photo': [], 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False, 'from': {'id': 1309103451, 'first_name': 'mybot', 'is_bot': True, 'username': 'awesome_assistant_bot'}}
+bot.py[LINE:72]# DEBUG    [2020-10-01 12:18:17,825]  Exiting: send_message
+homework.py[LINE:40]# ERROR    [2020-10-01 12:18:18,452]  Error name: Wrong from_date format
+homework.py[LINE:66]# ERROR    [2020-10-01 12:18:18,452]  Fail get homework status with error: Wrong from_date format
+homework.py[LINE:40]# ERROR    [2020-10-01 12:19:08,572]  Error name: Wrong from_date format
+homework.py[LINE:66]# ERROR    [2020-10-01 12:19:08,572]  Fail get homework status with error: Wrong from_date format
+homework.py[LINE:40]# ERROR    [2020-10-01 12:19:58,680]  Error name: Wrong from_date format
+homework.py[LINE:66]# ERROR    [2020-10-01 12:19:58,681]  Fail get homework status with error: Wrong from_date format
+homework.py[LINE:40]# ERROR    [2020-10-01 12:20:48,833]  Error name: Wrong from_date format
+homework.py[LINE:66]# ERROR    [2020-10-01 12:20:48,833]  Fail get homework status with error: Wrong from_date format
+homework.py[LINE:40]# ERROR    [2020-10-01 12:21:38,947]  Error name: Wrong from_date format
+homework.py[LINE:66]# ERROR    [2020-10-01 12:21:38,947]  Fail get homework status with error: Wrong from_date format
+homework.py[LINE:40]# ERROR    [2020-10-01 12:22:29,068]  Error name: Wrong from_date format
+homework.py[LINE:66]# ERROR    [2020-10-01 12:22:29,068]  Fail get homework status with error: Wrong from_date format
+bot.py[LINE:69]# DEBUG    [2020-10-01 12:26:45,060]  Entering: send_message
+connectionpool.py[LINE:834]# DEBUG    [2020-10-01 12:26:45,060]  Starting new HTTPS connection (1): api.telegram.org
+connectionpool.py[LINE:410]# DEBUG    [2020-10-01 12:26:45,244]  https://api.telegram.org:443 "POST /bot1309103451:AAF51dkAqb8JPJ2-3ej5YDxq37w-6Q3T3xo/sendMessage HTTP/1.1" 200 381
+bot.py[LINE:71]# DEBUG    [2020-10-01 12:26:45,245]  {'message_id': 48, 'date': 1601544405, 'chat': {'id': 250669707, 'type': 'private', 'username': 'awesome_0nly', 'first_name': 'Gleb', 'last_name': 'Stasyuk'}, 'text': 'Бот начал свою работу', 'entities': [], 'caption_entities': [], 'photo': [], 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False, 'from': {'id': 1309103451, 'first_name': 'mybot', 'is_bot': True, 'username': 'awesome_assistant_bot'}}
+bot.py[LINE:72]# DEBUG    [2020-10-01 12:26:45,245]  Exiting: send_message
+homework.py[LINE:40]# ERROR    [2020-10-01 12:26:45,382]  Error name: Wrong from_date format
+homework.py[LINE:66]# ERROR    [2020-10-01 12:26:45,383]  Fail get homework status with error: fwfwe
+homework.py[LINE:40]# ERROR    [2020-10-01 12:27:35,580]  Error name: Wrong from_date format
+homework.py[LINE:66]# ERROR    [2020-10-01 12:27:35,580]  Fail get homework status with error: fwfwe
+homework.py[LINE:40]# ERROR    [2020-10-01 12:28:25,745]  Error name: Wrong from_date format
+homework.py[LINE:66]# ERROR    [2020-10-01 12:28:25,745]  Fail get homework status with error: fwfwe
+homework.py[LINE:40]# ERROR    [2020-10-01 12:29:15,861]  Error name: Wrong from_date format
+homework.py[LINE:66]# ERROR    [2020-10-01 12:29:15,862]  Fail get homework status with error: fwfwe
+homework.py[LINE:40]# ERROR    [2020-10-01 12:30:06,022]  Error name: Wrong from_date format
+homework.py[LINE:66]# ERROR    [2020-10-01 12:30:06,022]  Fail get homework status with error: fwfwe
+homework.py[LINE:40]# ERROR    [2020-10-01 12:30:56,177]  Error name: Wrong from_date format
+homework.py[LINE:66]# ERROR    [2020-10-01 12:30:56,178]  Fail get homework status with error: fwfwe
+homework.py[LINE:40]# ERROR    [2020-10-01 12:31:46,295]  Error name: Wrong from_date format
+homework.py[LINE:66]# ERROR    [2020-10-01 12:31:46,296]  Fail get homework status with error: fwfwe
+bot.py[LINE:69]# DEBUG    [2020-10-01 12:34:25,940]  Entering: send_message
+connectionpool.py[LINE:834]# DEBUG    [2020-10-01 12:34:25,940]  Starting new HTTPS connection (1): api.telegram.org
+connectionpool.py[LINE:410]# DEBUG    [2020-10-01 12:34:26,151]  https://api.telegram.org:443 "POST /bot1309103451:AAF51dkAqb8JPJ2-3ej5YDxq37w-6Q3T3xo/sendMessage HTTP/1.1" 200 381
+bot.py[LINE:71]# DEBUG    [2020-10-01 12:34:26,152]  {'message_id': 49, 'date': 1601544865, 'chat': {'id': 250669707, 'type': 'private', 'username': 'awesome_0nly', 'first_name': 'Gleb', 'last_name': 'Stasyuk'}, 'text': 'Бот начал свою работу', 'entities': [], 'caption_entities': [], 'photo': [], 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False, 'from': {'id': 1309103451, 'first_name': 'mybot', 'is_bot': True, 'username': 'awesome_assistant_bot'}}
+bot.py[LINE:72]# DEBUG    [2020-10-01 12:34:26,152]  Exiting: send_message
+homework.py[LINE:40]# ERROR    [2020-10-01 12:34:26,271]  Homework status contains error: Wrong from_date format
+homework.py[LINE:66]# ERROR    [2020-10-01 12:34:26,271]  Fail get homework status with error: Wrong from_date format
+bot.py[LINE:69]# DEBUG    [2020-10-01 12:45:37,877]  Entering: send_message
+connectionpool.py[LINE:834]# DEBUG    [2020-10-01 12:45:37,878]  Starting new HTTPS connection (1): api.telegram.org
+connectionpool.py[LINE:410]# DEBUG    [2020-10-01 12:45:38,053]  https://api.telegram.org:443 "POST /bot1309103451:AAF51dkAqb8JPJ2-3ej5YDxq37w-6Q3T3xo/sendMessage HTTP/1.1" 200 381
+bot.py[LINE:71]# DEBUG    [2020-10-01 12:45:38,054]  {'message_id': 50, 'date': 1601545537, 'chat': {'id': 250669707, 'type': 'private', 'username': 'awesome_0nly', 'first_name': 'Gleb', 'last_name': 'Stasyuk'}, 'text': 'Бот начал свою работу', 'entities': [], 'caption_entities': [], 'photo': [], 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False, 'from': {'id': 1309103451, 'first_name': 'mybot', 'is_bot': True, 'username': 'awesome_assistant_bot'}}
+bot.py[LINE:72]# DEBUG    [2020-10-01 12:45:38,054]  Exiting: send_message
+homework.py[LINE:40]# ERROR    [2020-10-01 12:45:38,175]  Homework status contains error: Wrong from_date format
+homework.py[LINE:66]# ERROR    [2020-10-01 12:45:38,175]  Unsuccessful bot launch with error: Wrong from_date format
+homework.py[LINE:40]# ERROR    [2020-10-01 12:46:12,458]  Homework status contains error: Wrong from_date format
+homework.py[LINE:66]# ERROR    [2020-10-01 12:46:12,459]  Unsuccessful bot launch with error: Wrong from_date format
+homework.py[LINE:41]# ERROR    [2020-10-01 12:51:29,104]  Homework status contains error: Wrong from_date format
+homework.py[LINE:67]# ERROR    [2020-10-01 12:51:29,104]  Unsuccessful bot launch with error: Wrong from_date format
+homework.py[LINE:44]# ERROR    [2020-10-01 12:56:56,021]  Unexpected error while homework ststus get
+homework.py[LINE:70]# ERROR    [2020-10-01 12:56:56,021]  Unsuccessful bot launch with error: Unexpected error
+homework.py[LINE:44]# ERROR    [2020-10-01 12:58:26,858]  not_authenticated
+homework.py[LINE:73]# ERROR    [2020-10-01 12:58:26,858]  Unsuccessful bot launch with error: not_authenticated
+homework.py[LINE:69]# ERROR    [2020-10-01 13:01:30,218]  Unsuccessful bot launching with error: not_authenticated
+homework.py[LINE:71]# ERROR    [2020-10-01 13:04:28,928]  Unsuccessful bot launching with error: not_authenticated
+homework.py[LINE:72]# ERROR    [2020-10-01 13:15:35,083]  Unsuccessful bot launching with error: Authorisation Error
+homework.py[LINE:72]# ERROR    [2020-10-01 13:15:46,457]  Unsuccessful bot launching with error: Homework status contains error: Wrong from_date format
+homework.py[LINE:72]# ERROR    [2020-10-01 13:16:00,648]  Unsuccessful bot launching with error: Get homework status failed with error:Expecting value: line 1 column 1 (char 0)
+homework.py[LINE:72]# ERROR    [2020-10-01 13:25:10,061]  Unsuccessful bot launching with error: Unexpected error while homework ststus get
+homework.py[LINE:72]# ERROR    [2020-10-01 13:25:36,907]  Unsuccessful bot launching with error: Authorisation Error

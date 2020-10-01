@@ -1,12 +1,14 @@
+import logging
 import os
 import requests
-import telegram
 import time
-import logging
 
 from dotenv import load_dotenv
+import telegram
 
-logging.basicConfig(filename="log.txt", level=logging.INFO)
+logging.basicConfig(filename="Log.log", level=logging.ERROR,
+                    format=u'%(filename)s[LINE:%(lineno)d]# '
+                           u'%(levelname)-8s [%(asctime)s]  %(message)s')
 load_dotenv()
 
 PRACTICUM_TOKEN = os.getenv("PRACTICUM_TOKEN")
@@ -14,6 +16,7 @@ TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
 TELEGRAM_CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
 
 bot = telegram.Bot(token=TELEGRAM_TOKEN)
+logger = logging.getLogger(__name__)
 
 
 def parse_homework_status(homework):
@@ -21,7 +24,8 @@ def parse_homework_status(homework):
     if homework['status'] != 'approved':
         verdict = 'К сожалению в работе нашлись ошибки.'
     else:
-        verdict = 'Ревьюеру всё понравилось, можно приступать к следующему уроку.'
+        verdict = 'Ревьюеру всё понравилось, ' + \
+                  'можно приступать к следующему уроку.'
     return f'У вас проверили работу "{homework_name}"!\n\n{verdict}'
 
 
@@ -32,18 +36,18 @@ def get_homework_statuses(current_timestamp):
         homework_statuses = requests.get(
             'https://praktikum.yandex.ru/api/user_api/homework_statuses/',
             headers=headers,
-            params=date).json()
+            params=date
+        ).json()
         if homework_statuses.get('error'):
-            logging.error("An error has happened! Error name: ",
-                          homework_statuses['error']['error'])
-            raise SystemExit()
+            raise RuntimeError("Homework status contains error: "
+                               + homework_statuses['error']['error'])
+        if homework_statuses.get('code') == 'not_authenticated':
+            raise RuntimeError('Authorisation Error')
+        if 'homeworks' not in homework_statuses:
+            raise RuntimeError('Unexpected error while homework ststus get')
         return homework_statuses
     except (requests.exceptions.RequestException, ValueError) as e:
-        # Нужно выяснить какого типа исключения он бросает. - типа.RequestException?
-        # зачем в прошлом ДЗ ловили ValueError я так и не понял
-        # logger почему-то не сохраняет текст ошибк в файле
-        logging.error(f"An error has happened! Error name: {e}")
-        raise SystemExit()
+        raise RuntimeError(f'Get homework status failed with error:{e}')
 
 
 def send_message(message):
@@ -52,7 +56,7 @@ def send_message(message):
 
 def main():
     current_timestamp = int(time.time())
-    send_message('Бот начал свою работу')
+    send_message('Bot launch')
     while True:
         try:
             new_homework = get_homework_statuses(current_timestamp)
@@ -64,9 +68,8 @@ def main():
             time.sleep(1200)
 
         except Exception as e:
-            print(f'Бот упал с ошибкой: {e}')
+            logger.error(f'Unsuccessful bot launching with error: {e}')
             time.sleep(50)
-            continue
 
 
 if __name__ == '__main__':
