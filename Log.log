@@ -63,3 +63,16 @@ homework.py[LINE:72]# ERROR    [2020-10-01 13:15:46,457]  Unsuccessful bot launc
 homework.py[LINE:72]# ERROR    [2020-10-01 13:16:00,648]  Unsuccessful bot launching with error: Get homework status failed with error:Expecting value: line 1 column 1 (char 0)
 homework.py[LINE:72]# ERROR    [2020-10-01 13:25:10,061]  Unsuccessful bot launching with error: Unexpected error while homework ststus get
 homework.py[LINE:72]# ERROR    [2020-10-01 13:25:36,907]  Unsuccessful bot launching with error: Authorisation Error
+homework.py[LINE:71]# ERROR    [2020-10-02 11:39:03,890]  Unsuccessful bot launching with error: Authorisation Error. line:18
+homework.py[LINE:71]# ERROR    [2020-10-02 11:39:54,051]  Unsuccessful bot launching with error: Authorisation Error. line:18
+homework.py[LINE:71]# ERROR    [2020-10-02 11:40:44,189]  Unsuccessful bot launching with error: Authorisation Error. line:18
+homework.py[LINE:71]# ERROR    [2020-10-02 11:41:34,329]  Unsuccessful bot launching with error: Authorisation Error. line:18
+homework.py[LINE:71]# ERROR    [2020-10-02 11:42:20,399]  Unsuccessful bot launching with error: Authorisation Error. line:47
+homework.py[LINE:71]# ERROR    [2020-10-02 11:43:10,579]  Unsuccessful bot launching with error: Authorisation Error. line:47
+homework.py[LINE:71]# ERROR    [2020-10-02 11:44:00,729]  Unsuccessful bot launching with error: Authorisation Error. line:47
+homework.py[LINE:71]# ERROR    [2020-10-02 11:44:31,384]  Unsuccessful bot launching with error: Authorisation Error. line:79
+homework.py[LINE:71]# ERROR    [2020-10-02 11:45:56,570]  Unsuccessful bot launching with error: 'frame' object is not callable
+homework.py[LINE:70]# ERROR    [2020-10-02 11:58:56,805]  Unsuccessful bot launching with error: Authorisation Error. line:46
+homework.py[LINE:70]# ERROR    [2020-10-02 11:59:47,311]  Unsuccessful bot launching with error: Authorisation Error. line:46
+homework.py[LINE:70]# ERROR    [2020-10-02 12:05:37,315]  Unsuccessful bot launching with error: Authorisation Error. line:46
+homework.py[LINE:71]# ERROR    [2020-10-02 12:18:58,750]  Unsuccessful bot launching with error: Authorisation Error. line:44

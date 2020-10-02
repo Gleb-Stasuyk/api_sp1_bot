@@ -4,11 +4,9 @@ import requests
 import time
 
 from dotenv import load_dotenv
+from inspect import currentframe
 import telegram
 
-logging.basicConfig(filename="Log.log", level=logging.ERROR,
-                    format=u'%(filename)s[LINE:%(lineno)d]# '
-                           u'%(levelname)-8s [%(asctime)s]  %(message)s')
 load_dotenv()
 
 PRACTICUM_TOKEN = os.getenv("PRACTICUM_TOKEN")
@@ -40,14 +38,15 @@ def get_homework_statuses(current_timestamp):
         ).json()
         if homework_statuses.get('error'):
             raise RuntimeError("Homework status contains error: "
-                               + homework_statuses['error']['error'])
+                               + homework_statuses['error']['error']
+                               + f'line:{currentframe().f_lineno}')
         if homework_statuses.get('code') == 'not_authenticated':
-            raise RuntimeError('Authorisation Error')
-        if 'homeworks' not in homework_statuses:
-            raise RuntimeError('Unexpected error while homework ststus get')
+            raise RuntimeError(f'Authorisation Error. '
+                               f'line:{currentframe().f_lineno}')
         return homework_statuses
     except (requests.exceptions.RequestException, ValueError) as e:
-        raise RuntimeError(f'Get homework status failed with error:{e}')
+        raise RuntimeError(f'Request homework status failed with error:{e}. '
+                           f'line:{currentframe().f_lineno}')
 
 
 def send_message(message):
@@ -73,4 +72,7 @@ def main():
 
 
 if __name__ == '__main__':
+    logging.basicConfig(filename="Log.log", level=logging.ERROR,
+                        format=u'%(filename)s[LINE:%(lineno)d]# '
+                               u'%(levelname)-8s [%(asctime)s]  %(message)s')
     main()
