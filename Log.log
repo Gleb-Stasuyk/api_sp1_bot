@@ -76,3 +76,19 @@ homework.py[LINE:70]# ERROR    [2020-10-02 11:58:56,805]  Unsuccessful bot launc
 homework.py[LINE:70]# ERROR    [2020-10-02 11:59:47,311]  Unsuccessful bot launching with error: Authorisation Error. line:46
 homework.py[LINE:70]# ERROR    [2020-10-02 12:05:37,315]  Unsuccessful bot launching with error: Authorisation Error. line:46
 homework.py[LINE:71]# ERROR    [2020-10-02 12:18:58,750]  Unsuccessful bot launching with error: Authorisation Error. line:44
+homework.py[LINE:70]# ERROR    [2020-10-02 14:50:51,671]  Unsuccessful bot launching with error: Authorisation Error. line:44
+homework.py[LINE:70]# ERROR    [2020-10-02 18:44:03,285]  Warning! Caught an exception: Authorisation Error. line:44
+homework.py[LINE:70]# ERROR    [2020-10-02 18:47:10,307]  Warning! Bot have a problem: Authorisation Error. line:44
+homework.py[LINE:70]# ERROR    [2020-10-02 18:48:00,896]  Warning! Bot have a problem: Authorisation Error. line:44
+homework.py[LINE:70]# ERROR    [2020-10-02 18:48:51,032]  Warning! Bot have a problem: Authorisation Error. line:44
+homework.py[LINE:70]# ERROR    [2020-10-02 18:49:41,197]  Warning! Bot have a problem: Authorisation Error. line:44
+homework.py[LINE:70]# ERROR    [2020-10-02 18:50:31,304]  Warning! Bot have a problem: Authorisation Error. line:44
+homework.py[LINE:72]# ERROR    [2020-10-02 18:53:23,025]  Warning! Bot have a problem: list index out of range
+homework.py[LINE:72]# ERROR    [2020-10-02 18:53:39,474]  Warning! Bot have a problem: list index out of range
+homework.py[LINE:69]# ERROR    [2020-10-02 19:08:35,479]  Warning! Bot have a problem: list index out of range
+homework.py[LINE:70]# ERROR    [2020-10-02 19:26:15,583]  Warning! Bot have a problem: Authorisation Error. line:44
+homework.py[LINE:70]# ERROR    [2020-10-02 19:27:29,145]  Warning! Bot have a problem: Homework status contains error: Wrong from_date formatline:42
+homework.py[LINE:50]# ERROR    [2020-10-08 16:58:19,896]  Authorisation Error. not_authenticated
+homework.py[LINE:50]# ERROR    [2020-10-08 16:58:25,070]  Authorisation Error. not_authenticated
+homework.py[LINE:46]# ERROR    [2020-10-08 17:12:58,500]  Homework status contains error: Wrong from_date format
+homework.py[LINE:46]# ERROR    [2020-10-08 17:13:03,651]  Homework status contains error: Wrong from_date format
