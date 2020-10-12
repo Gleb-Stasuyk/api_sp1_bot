@@ -15,10 +15,6 @@ TELEGRAM_CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
 
 bot = telegram.Bot(token=TELEGRAM_TOKEN)
 logger = logging.getLogger(__name__)
-path_to_logger = sys.argv[0]
-path_to_logger_dir = os.path.dirname(os.path.abspath(path_to_logger))
-name = 'Log.log'
-filename = os.path.join(path_to_logger_dir, name)
 
 
 def parse_homework_status(homework):
@@ -34,25 +30,26 @@ def parse_homework_status(homework):
 def get_homework_statuses(current_timestamp):
     headers = {'Authorization': f'OAuth {PRACTICUM_TOKEN}'}
     date = {'from_date': current_timestamp}
+    url = 'https://praktikum.yandex.ru/api/user_api/homework_statuses/'
     try:
         homework_statuses = requests.get(
-            'https://praktikum.yandex.ru/api/user_api/homework_statuses/',
+            url,
             headers=headers,
             params=date
         ).json()
         if homework_statuses.get('error'):
             error = (f'Homework status contains error: '
-                     f'{homework_statuses["error"]["error"]}')
-            logger.error(error)
+                     f'{homework_statuses["error"]["error"]} '
+                     f'\non {url}, with params: {date}')
             raise RuntimeError(error)
         if homework_statuses.get('code') == 'not_authenticated':
-            error = f'Authorisation Error. not_authenticated'
-            logger.error(error)
+            error = (f'Authorisation Error. not_authenticated '
+                     f'\non {url}, with params: {date}')
             raise RuntimeError(error)
         return homework_statuses
     except (requests.exceptions.RequestException, ValueError) as e:
-        error = f'Request homework status failed with error:{e}.'
-        logger.error(error)
+        error = (f'Request homework status failed with error:{e}. '
+                 f'\non {url}, with params: {date}')
         raise RuntimeError(error)
 
 
@@ -62,23 +59,28 @@ def send_message(message):
 
 def main():
     current_timestamp = int(time.time())
+    send_message('Bot launch')
 
     while True:
         try:
             new_homework = get_homework_statuses(current_timestamp)
             if new_homework.get('homeworks'):
-                send_message(parse_homework_status(new_homework.get('homeworks')[0]))
-            current_timestamp = new_homework.get('current_date')
+                send_message(parse_homework_status(
+                    new_homework.get('homeworks')[0]))
+            current_timestamp = new_homework.get('current_date',
+                                                 current_timestamp)
             time.sleep(1200)
 
         except Exception as e:
-            print(f'Бот упал с ошибкой: {e}')
+            exc_traceback = sys.exc_info()[2]
+            logger.error(f'Problem: {e}, tb_lineno: {exc_traceback.tb_lineno}')
             time.sleep(5)
-            continue
 
 
 if __name__ == '__main__':
-    logging.basicConfig(filename=filename, level=logging.ERROR,
+    path_to_logger = sys.argv[0]
+    path_to_logger_dir = os.path.dirname(os.path.abspath(path_to_logger))
+    logging.basicConfig(filename=sys.argv[0] + '.log', level=logging.ERROR,
                         format=u'%(filename)s[LINE:%(lineno)d]# '
-                               u'%(levelname)-8s [%(asctime)s]  %(message)s')
+                               u'%(levelname)-8s [%(asctime)s]  %(message)s\n')
     main()
