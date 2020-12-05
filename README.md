@@ -1,5 +1,5 @@
 # Telegram bot
-Еelegram bot for heroku. 
+Telegram bot for heroku. 
 Every 20 minutes (subject to free limits) sends a request to the Ya.P. API. to receive the status of completed homework
 
 ## Usage
