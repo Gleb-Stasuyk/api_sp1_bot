@@ -18,6 +18,11 @@ logger = logging.getLogger(__name__)
 
 
 def parse_homework_status(homework):
+    """
+    Проверка статуса рабты.
+    :param homework: JSON словарь с данными о последней работе
+    :return: str. Вердикт о зачете работы
+    """
     homework_name = homework['homework_name']
     if homework['status'] != 'approved':
         verdict = 'К сожалению в работе нашлись ошибки.'
@@ -28,6 +33,11 @@ def parse_homework_status(homework):
 
 
 def get_homework_statuses(current_timestamp):
+    """
+    Отправляет запрос к API ЯП на получение данных о состоянии статуса проверки работы.
+    :param current_timestamp: datetime. Отсечка времени прошлого запроса.
+    :return: Словарь с состояним работы
+    """
     headers = {'Authorization': f'OAuth {PRACTICUM_TOKEN}'}
     date = {'from_date': current_timestamp}
     url = 'https://praktikum.yandex.ru/api/user_api/homework_statuses/'
@@ -62,6 +72,9 @@ def main():
     send_message('Bot launch')
 
     while True:
+        """
+        Запрос к API ЯП на наличие ответва от ревьюера раз в 20 минут.
+        """
         try:
             new_homework = get_homework_statuses(current_timestamp)
             if new_homework.get('homeworks'):
